@@ -1,0 +1,103 @@
+/* herosection.css */
+
+.herosection {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 75rem;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.introbox {
+    margin-top:1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.greet {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.introName {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.name {
+    color: yellow;
+}
+
+.intopara {
+    font-size: 1rem;
+    font-weight: 300;
+    /* Prevents text from stretching too far */
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+}
+
+.profileImg {
+    margin-top: 2rem;
+    position: absolute;
+    right:-10em;
+    transform: translateY(-75%);
+    /* Perfectly centers vertically */
+    height: 70em;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hirebtn {
+    background-color: rgb(116, 202, 245);
+    width: fit-content;
+    padding: 0.75rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.hirebtn:hover {
+    background-color: aqua;
+}
+
+/* RESPONSIVE QUERIES */
+
+@media screen and (max-width: 850px) {
+    .introName {
+        font-size: 3rem;
+    }
+
+    .profileImg {
+        right: -12rem;
+       
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .introbox {
+        padding: 1rem;
+    }
+
+    .introName {
+        font-size: 2.5rem;
+    }
+
+ .profileImg{
+    right:-15rem;
+ }
+    .intopara {
+        font-size: 0.8rem;
+        br {
+            display: none;
+            /* Removes forced line breaks on small screens */
+        }
+    }
+}

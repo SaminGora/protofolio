@@ -1,0 +1,94 @@
+.navbar {
+    background-color: rgb(39, 38, 38);
+    height: 5rem;
+    width: 100vw;
+    max-width: 75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em 1em;
+    position: sticky;
+    top: 0;
+    z-index:3;
+ 
+}
+
+.logo {
+    width: 8em;
+    height: 6em;
+}
+
+.navItems {
+    font-size: 1.5em;
+    cursor: pointer;
+    position: relative;
+    margin: 1em;
+}
+
+.navItems::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background-color: white;
+    transition: .6s ease-in-out;
+}
+
+.navItems:hover::after {
+    width: 100%;
+    background-color: rgb(0, 187, 255);
+}
+
+.contactbtn {
+    width: 8em;
+    height: 3em;
+    border: none;
+    border-radius: 2em;
+    background-color: rgb(96, 158, 209);
+}
+
+.contactbtn:hover {
+    background-color: rgb(0, 187, 255);
+}
+
+.active {
+    color: rgb(89, 179, 195);
+    border-bottom: 3px solid rgb(89, 179, 195);
+}
+
+.menu {
+    display: none;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    margin-right: -0.5rem;
+    position: relative;
+}
+.mobileMenu{
+    top: 4rem;
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-width:15rem;
+    background-color: rgb(39, 38, 38);
+    right: 2rem;
+    z-index: 2;
+}
+@media screen and (max-width: 780px) {
+
+    .menu {
+        display: block;
+    }
+        .contactbtn{
+            display: none;
+        }
+    
+    .navlinks {
+        display: none;
+    }
+
+}

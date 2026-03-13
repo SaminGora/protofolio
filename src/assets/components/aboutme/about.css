@@ -1,0 +1,67 @@
+.aboutme{
+    width: 65rem;
+    height: 80vh;
+    display:grid;
+   grid-template-columns: 1fr 2fr;
+   align-items: center;
+    margin: 0 auto;
+}
+.pp{
+width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Adds a professional blue glow */
+    border: 4px solid #55c2f3;
+    box-shadow: 0 5px 20px rgba(85, 194, 243, 0.3);
+    transition: 0.3s ease;
+}
+.pp:hover{
+    transform: scale(1.05);
+        /* Slight zoom on hover */
+    box-shadow: 0 0 30px rgba(85, 194, 243, 0.6);
+}
+.desc{
+    margin: 1rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 55rem;
+    width: 100%;
+}
+.desc p{
+    margin-top: 2rem;
+    
+}
+.desc h2{
+    text-align:left;
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+@media screen and (max-width: 450px) {
+    .aboutme {
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding-top: 6rem;
+        
+    }
+
+    .pp {
+        height: 18em;
+        width: 16em;
+        margin-bottom: 2rem;
+    }
+
+    .desc {
+        font-size: smaller;
+        text-align: center;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .desc h2 {
+        text-align: center;
+    
+    }
+}
