@@ -1,7 +1,7 @@
 .navbar {
     background-color: rgb(39, 38, 38);
     height: 5rem;
-    width: 100vw;
+    width: 100%;
     max-width: 75rem;
     display: flex;
     justify-content: space-between;
@@ -10,13 +10,14 @@
     padding: 1em 1em;
     position: sticky;
     top: 0;
-    z-index:3;
- 
+    z-index: 3;
+    overflow: hidden;
 }
 
 .logo {
     width: 8em;
-    height: 6em;
+    height: 5em;
+    object-fit: contain;
 }
 
 .navItems {
@@ -67,26 +68,31 @@
     margin-right: -0.5rem;
     position: relative;
 }
-.mobileMenu{
-    top: 4rem;
-    position:absolute;
-    display:flex;
+
+.mobileMenu {
+    top: 5rem;
+    position: absolute;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    min-width:15rem;
+    min-width: 15rem;
     background-color: rgb(39, 38, 38);
-    right: 2rem;
+    right: 0;
+    padding-bottom: 1rem;
+    border-radius: 0 0 1rem 1rem;
     z-index: 2;
 }
+
 @media screen and (max-width: 780px) {
 
     .menu {
         display: block;
     }
-        .contactbtn{
-            display: none;
-        }
-    
+
+    .contactbtn {
+        display: none;
+    }
+
     .navlinks {
         display: none;
     }

@@ -1,8 +1,9 @@
 .education {
+    width: 100%;
     max-width: 65rem;
     margin: 0 auto;
     padding: 4rem 2rem;
-    
+    overflow: hidden;
 }
 .card{
     display: flex;
