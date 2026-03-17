@@ -32,10 +32,15 @@ function Contact() {
     <div className="contact-form" id="contact">
       <h2>Contact Me</h2>
       <form className="form" ref={form} onSubmit={sendEmail}>
-        <input type="text" placeholder="Your Name" name="name" required/>
-        <input type="text" placeholder="Your Address" name="address" required/>
-        <input type="email" placeholder="Your Email" name="email" required/>
-        <textarea row="5" placeholder="Your Message" name="message"required></textarea>
+        <input type="text" placeholder="Your Name" name="name" required />
+        <input type="text" placeholder="Your Address" name="address" required />
+        <input type="email" placeholder="Your Email" name="email" required />
+        <textarea
+          row="5"
+          placeholder="Your Message"
+          name="message"
+          required
+        ></textarea>
         <br />
         <button type="submit">Send</button>
       </form>
@@ -46,7 +51,7 @@ function Contact() {
         <a href="https://www.instagram.com/sa.min_gora">
           <SlSocialInstagram className="insta" />
         </a>
-        <a href="www.linkedin.com/in/samin-gora-b70a61337">
+        <a href="https://www.linkedin.com/in/samin-gora-b70a61337/">
           <SlSocialLinkedin className="linkdin" />
         </a>
       </div>
