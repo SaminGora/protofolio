@@ -7,21 +7,20 @@ import Skills from "./assets/components/skills/skills";
 import './App.css';
 import Project from "./assets/components/projects/project";
 import Footer from "./assets/components/footer/footer";
+import { useState } from "react";
 function App() {
   
-
-
-
   return (
     <div>
-      <Navbar />
-      < Herosection />
+      <Navbar  />
+      <Herosection />
       <About />
       <Education />
       <Skills />
-      <Project/>
+      <Project />
       <Contact />
-      <Footer /> 
+      <Footer />
+    
     </div>
   );
 }

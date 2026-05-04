@@ -1,4 +1,4 @@
-import profile from '../../../assets/images/samin.png';
+import profile from '../../../assets/images/profile.jpg';
 import "./herosection.css";
 import {Link} from 'react-scroll';
 import AOS from "aos";
@@ -27,19 +27,29 @@ function Herosection(){
             I'm a skilled Web Developer with experience in creating visually{" "}
             <br /> appealing and user friendly websites.
           </p>
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=gorasamin6@gmail.com&su=Project Inquiry&body=Hi, I'd like to hire you for..."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button
-              className="hirebtn"
+          <div>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=gorasamin6@gmail.com&su=Project Inquiry&body=Hi, I'd like to hire you for..."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button
+                className="hirebtn"
+                data-aos="zoom-in-down"
+                data-aos-delay="100"
+              >
+                Hire Me
+              </button>
+            </a>
+            <a
+              href="https://github.com/SaminGora"
+              className="github "
               data-aos="zoom-in-down"
               data-aos-delay="100"
             >
-              Hire Me
-            </button>
-          </a>
+              Github
+            </a>
+          </div>
         </div>
         <div className="profile">
           <img src={profile} className="profileImg" />

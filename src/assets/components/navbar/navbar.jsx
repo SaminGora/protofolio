@@ -21,7 +21,7 @@ function Navbar() {
             smooth={true}
             offset={-100}
             duration={1000}
-            onClick={() => setmenu(false)}
+            // onClick={() => setmenu(false)}
           >
             Home
           </Link>
@@ -33,7 +33,7 @@ function Navbar() {
             smooth={true}
             offset={-50}
             duration={1000}
-            onClick={() => setmenu(false)}
+            // onClick={() => setmenu(false)}
           >
             About
           </Link>
@@ -45,7 +45,7 @@ function Navbar() {
             smooth={true}
             offset={-100}
             duration={1000}
-            onClick={() => setmenu(false)}
+            // onClick={() => setmenu(false)}
           >
             Education
           </Link>
@@ -57,7 +57,7 @@ function Navbar() {
             smooth={true}
             offset={-100}
             duration={1000}
-            onClick={() => setmenu(false)}
+            // onClick={() => setmenu(false)}
           >
             Skills
           </Link>
@@ -80,7 +80,7 @@ function Navbar() {
             document
               .getElementById("contact")
               .scrollIntoView({ behavior: "smooth" });
-            setmenu(false);
+          
           }}
         >
           Contact Me
