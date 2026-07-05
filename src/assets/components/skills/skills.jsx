@@ -7,76 +7,123 @@ import mern from "../../../assets/images/mern.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
-function Skills(){
+import { SiTailwindcss, SiReact, SiNodedotjs, SiMongodb } from 'react-icons/si';
+
+const skills = [
+  {
+    img: html,
+    icon: null,
+    title: "HTML, CSS & JS",
+    desc: "Build responsive and interactive websites with clean UI, structured layouts, and dynamic client-side functionality.",
+    level: 90,
+    color: "#f97316",
+    tag: "Frontend",
+  },
+  {
+    img: null,
+    icon: <SiTailwindcss size={52} color="#38bdf8" />,
+    title: "Tailwind CSS",
+    desc: "Craft beautiful, modern UIs rapidly using utility-first CSS classes with full responsive control and customization.",
+    level: 75,
+    color: "#38bdf8",
+    tag: "Styling",
+  },
+  {
+    img: php,
+    icon: null,
+    title: "PHP",
+    desc: "Develop server-side logic, handle form submissions, manage sessions, and build secure web applications.",
+    level: 80,
+    color: "#a78bfa",
+    tag: "Backend",
+  },
+  {
+    img: mysql,
+    icon: null,
+    title: "MySQL",
+    desc: "Design and manage relational databases, write optimized queries, and maintain data integrity using foreign keys.",
+    level: 75,
+    color: "#34d399",
+    tag: "Database",
+  },
+  {
+    img: python,
+    icon: null,
+    title: "Python",
+    desc: "Basic experience with Python for scripting, logic building, and understanding backend/programming fundamentals.",
+    level: 55,
+    color: "#facc15",
+    tag: "Language",
+  },
+  {
+    img: mern,
+    icon: null,
+    title: "MERN Stack",
+    desc: "Learning full-stack development with MongoDB, Express, React, and Node.js to build modern web apps.",
+    level: 40,
+    color: "#60a5fa",
+    tag: "Full Stack",
+  },
+];
+
+function Skills() {
   useEffect(() => {
-    AOS.init({
-      duration:1000, // Animation duration (optional)
-      once: false, // Whether animation should only happen once (optional)
-    });
-    AOS.refresh(); // Used if new elements are added to the DOM dynamically
+    AOS.init({ duration: 900, once: false });
+    AOS.refresh();
   }, []);
-    return (
-      <section className="skill" id="skills">
-        <div className="skillsdes">
-          <h2>What I Do</h2>
-          <p className="info">
-            I design and develop clean, responsive, and user-friendly websites.
-            I also build web-based management systems with a focus on
-            functionality, performance, and real-world usability.
-          </p>
-        </div>
-        <div className="boxes">
-          <div className="box" data-aos="fade-up">
-            <img src={html} className="html" />
-            <div>
-              <h3>HTML,CSS,JS</h3>
-              <p className="skillDetail">
-                Build responsive and interactive websites with clean UI,
-                structured layouts, and dynamic client-side functionality.
-              </p>
+
+  return (
+    <section className="skills-section" id="skills">
+      <div className="skills-header" data-aos="fade-up">
+        <span className="skills-badge">Expertise</span>
+        <h2 className="skills-title">What I Do</h2>
+        <p className="skills-subtitle">
+          I design and develop clean, responsive, and user-friendly websites.
+          I also build web-based management systems with a focus on
+          functionality, performance, and real-world usability.
+        </p>
+      </div>
+
+      <div className="skills-grid">
+        {skills.map((skill, i) => (
+          <div
+            className="skill-card"
+            key={i}
+            data-aos="fade-up"
+            data-aos-delay={i * 80}
+            style={{ "--accent": skill.color }}
+          >
+            <div className="skill-card-top">
+              <div className="skill-icon-wrapper">
+                {skill.icon ? (
+                  skill.icon
+                ) : (
+                  <img src={skill.img} alt={skill.title} className="skill-img" />
+                )}
+              </div>
+              <span className="skill-tag" style={{ background: skill.color + "22", color: skill.color, border: `1px solid ${skill.color}44` }}>
+                {skill.tag}
+              </span>
+            </div>
+            <h3 className="skill-name">{skill.title}</h3>
+            <p className="skill-desc">{skill.desc}</p>
+            <div className="skill-bar-wrap">
+              <div className="skill-bar-label">
+                <span>Proficiency</span>
+                <span className="skill-pct">{skill.level}%</span>
+              </div>
+              <div className="skill-bar-track">
+                <div
+                  className="skill-bar-fill"
+                  style={{ width: `${skill.level}%`, background: skill.color }}
+                />
+              </div>
             </div>
           </div>
-          <div className="box" data-aos="fade-up">
-            <img src={php} className="php" />
-            <div>
-              <h3>PHP</h3>
-              <p className="skillDetail">
-                Develop server-side logic, handle form submissions, manage
-                sessions, and build secure web applications.
-              </p>
-            </div>
-          </div>
-          <div className="box" data-aos="fade-up">
-            <img src={mysql} className="mysql" />
-            <div>
-              <h3>Mysql</h3>
-              <p className="skillDetail">
-                Design and manage relational databases, write optimized queries,
-                and maintain data integrity using foreign keys.
-              </p>
-            </div>
-          </div>
-          <div className="box" data-aos="fade-up">
-            <img src={python} className="python" />
-            <div>
-              <h3>Python</h3>
-              <p className="skillDetail">
-                Basic experience with Python for scripting, logic building, and
-                understanding backend/programming fundamentals.
-              </p>
-            </div>
-          </div>
-          <div className="box" data-aos="fade-up">
-            <img src={mern} className="python" />
-            <div>
-              <h3>MERN</h3>
-              <p className="skillDetail">
-               Learning....
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
+        ))}
+      </div>
+    </section>
+  );
 }
+
 export default Skills;
